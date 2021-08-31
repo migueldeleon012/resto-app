@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import DisplayAddForm from './components/DisplayAddForm';
 import DisplayProduct from './components/DisplayProducts'
 import Cart from './components/Cart'
+import Login from './components/Login';
 
 // import {v4 as uuidv4} from 'uuid'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
@@ -38,9 +39,16 @@ const App = () => {
           </div>
         </nav>
         <Route exact path='/' component={DisplayProduct}/>
-        <Route path='/form' component={DisplayAddForm}/>
         <Route path='/cart' component={Cart}/>
+        
+        {/* user.isAdmin && */}
+        <Route path='/form' component={DisplayAddForm}/>
+
+        
       </Router>
+
+      <Login/>
+
     </div>
   );
 }

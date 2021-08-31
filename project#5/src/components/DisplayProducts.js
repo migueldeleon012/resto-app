@@ -28,6 +28,7 @@ const DisplayProducts = () => {
     setCategory(e.currentTarget.dataset.category)
     setImage(e.currentTarget.dataset.image)
   }
+  //admin
 
   return (
     <main>
@@ -53,6 +54,7 @@ const DisplayProducts = () => {
                 </div>
                 <div className="btns">
                   <button onClick={ ()=> dispatch({type:'ADD_TO_CART', payload: product }) }>Order</button>
+                  {/* user.isAdmin &&*/}
                   <button 
                     onClick={ onEditButtonClickHanlder } 
                     data-id = {product.id}
